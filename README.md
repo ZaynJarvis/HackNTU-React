@@ -181,6 +181,86 @@ const Counter = () => {
 export default Counter;
 ```
 
+**Style with styled-components**
+
+Here is the most basic styled component, which align content at center.
+For more on [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
+
+```js
+const Wrapper = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	flex-direction: column;
+`;
+```
+
+CSS Color Code [here](https://www.quackit.com/css/css_color_codes.cfm)
+
+**Formik**
+
+Formik helps you to set up forms with ease.
+
+```js
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
+
+const CustomForm = () => (
+	<Formik
+		initialValues={{ email: '', password: '' }}
+		onSubmit={(values, { setSubmitting }) => {
+			setTimeout(() => {
+				alert(JSON.stringify(values, null, 2));
+				setSubmitting(false);
+			}, 400);
+		}}
+	>
+		{({ isSubmitting }) => (
+			<Form>
+				<Field type='email' name='email' />
+				<Field type='password' name='password' />
+				<button type='submit' disabled={isSubmitting}>
+					Submit
+				</button>
+			</Form>
+		)}
+	</Formik>
+);
+
+export default CustomForm;
+```
+
+**React Router**
+
+This is the most basic react router
+
+```js
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import MainPage from './containers/MainPage';
+import FormPage from './containers/FormPage';
+
+const App = () => (
+	<Router>
+		<div>
+			<nav>
+				<Link to='/'>Home</Link>
+				<Link to='/form'>Form</Link>
+			</nav>
+			<Route path='/' exact component={MainPage} />
+			<Route path='/form' component={FormPage} />
+		</div>
+	</Router>
+);
+
+export default App;
+```
+
+`exact` in Route is necessary cuz it means only / will match to that component.
+`Link` function just like `a` tag but with the `to` directive
+
 ## references
 
 - [React](https://reactjs.org/)
@@ -199,3 +279,5 @@ export default Counter;
 - [react hook](https://reactjs.org/docs/hooks-intro.html)
 - [formik](https://jaredpalmer.com/formik/)
 - [react router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
+- [css color code](https://www.quackit.com/css/css_color_codes.cfm)
