@@ -59,7 +59,7 @@ Install nodeJS and npm [here](https://nodejs.org/en/download/)
 Clone the a starter repo.
 
 ```bash
-git clone https://github.com/ZaynJarvis/HackNTU-React.git
+git clone --branch=starter https://github.com/ZaynJarvis/HackNTU-React.git
 ```
 
 If you are a coder,
