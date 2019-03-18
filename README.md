@@ -277,6 +277,50 @@ const getFact = () => {
 };
 ```
 
+## advanced
+
+**UI library**
+
+Two recommanded UI libraries are
+
+- [Material UI](https://material-ui.com/)
+- [ant design](https://ant.design/)
+
+Do take note that UI library may be hard to interpolate
+
+**Firebase Firestore**
+
+1. register an firebase app
+2. create firebase singleton instance in your app.
+
+```js
+class FireApp {
+	constructor(config) {
+		firebase.initializeApp(config);
+		this.firestore = firebase.firestore();
+	}
+	post(msg) {
+		const time = new Date().toISOString();
+		return this.firestore
+			.collection('msg')
+			.doc()
+			.set({
+				time,
+				...msg,
+			});
+	}
+	get() {
+		return this.firestore.collection('msg').get();
+	}
+}
+
+export default new FireApp(config);
+```
+
+> There is another way to add firebase to React context we do not cover it here, but you can read the approach on [web](https://google.com).
+
+understand how to work with firebase get / post [here](https://firebase.google.com/docs/firestore/query-data/get-data)
+
 ## references
 
 - [React](https://reactjs.org/)
@@ -299,3 +343,5 @@ const getFact = () => {
 - [css color code](https://www.quackit.com/css/css_color_codes.cfm)
 - [API marketplace](https://www.programmableweb.com)
 - [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+- [Material UI](https://material-ui.com/)
+- [ant design](https://ant.design/)

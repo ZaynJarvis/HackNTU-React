@@ -1,5 +1,5 @@
 import React from 'react';
-import CatFact from '../components/CatFact';
+import MSG from '../components/MSG';
 
-const MainPage = () => <CatFact />;
+const MainPage = () => <MSG />;
 export default MainPage;
