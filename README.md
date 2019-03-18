@@ -28,12 +28,12 @@
   - Install packages
   - Application modular structure
   - React Hooks
+  - Styling with styled-components
   - Formik
   - Router
   - Dynamic content with API
 - [React Advanced](#advanced)
   - UI libraries
-  - Styling with styled-components
   - Firebase Firestore
   - Progressive Web App
   - Deploy to Netlify
@@ -97,6 +97,90 @@ And that's all you need to start a project!
 - `serviceWorker` is for PWA (Progressive Web App), which cache the app in the client for offline support. Don't register serviceWorker when you are developing apps, cache will be a headache when you try to change stuff, [read here](https://developers.google.com/web/fundamentals/primers/service-workers/)
 - `App.js` is our first react component
 
+## basic
+
+**Tools will be used**
+
+- [styled-components](https://www.styled-components.com/docs): powerful css-in-js library
+- [Firebase firestore](https://firebase.google.com/products/firestore/): online database which is great for rapid prototyping.
+- [formik](https://jaredpalmer.com/formik/): The best form control library
+- [react router](https://reacttraining.com/react-router/web/guides/quick-start): The best react router library
+
+**Install packages**
+
+Depending on your package management tools.
+Check your pm by looking at lock file `yarn.lock` / `package-lock.json`
+
+If you are on npm
+
+```bash
+$ npm i firebase styled-components react-router-dom formik
+```
+
+If you are on yarn
+
+```bash
+$ yarn add firebase styled-components react-router-dom formik
+```
+
+**Application Structure**
+
+To manage your source file better in `/src`
+I will create folders for different purposes
+
+```bash
+-> src/
+  -> api/
+  -> assets/
+  -> containers/
+  -> components/
+  -> context/
+  -> utils/
+  -> mock/
+  -> modals/
+```
+
+For this workshop I will only use some of them for simplicity, however it is a good take away to make file structure modular
+
+**Basic React App**
+
+This is the most basic react app which does nothing.
+
+```js
+import React from 'react';
+
+const MainPage = () => <div />;
+export default MainPage;
+```
+
+If you cannot get how the arrow work, it is a ES6 feature arrow function which make function declaration shorter. read [here](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+
+**React Hooks**
+
+There are two type of React components
+
+1. Pure components (Stateless components)
+2. Stateful components
+
+Starting from React 16.8, [released a month ago](https://github.com/facebook/react/blob/master/CHANGELOG.md#1680-february-6-2019). There is a functional way to make a react stateful components, [React hooks](https://reactjs.org/docs/hooks-intro.html)
+
+The most basic react hook is like this
+
+```js
+import React from 'react';
+
+const Counter = () => {
+	const [count, setCount] = React.useState(0);
+	return (
+		<>
+			<button onClick={() => setCount(count + 1)}>add one</button>
+			<span>{count}</span>
+		</>
+	);
+};
+export default Counter;
+```
+
 ## references
 
 - [React](https://reactjs.org/)
@@ -108,3 +192,10 @@ And that's all you need to start a project!
 - [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
 - [create-react-app](https://github.com/facebook/create-react-app)
 - [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/)
+- [Firebase firestore](https://firebase.google.com/products/firestore/)
+- [styled-components](https://www.styled-components.com/docs)
+- [arrow functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+- [react 16.8](https://github.com/facebook/react/blob/master/CHANGELOG.md#1680-february-6-2019)
+- [react hook](https://reactjs.org/docs/hooks-intro.html)
+- [formik](https://jaredpalmer.com/formik/)
+- [react router](https://reacttraining.com/react-router/web/guides/quick-start)
