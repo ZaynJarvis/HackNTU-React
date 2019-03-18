@@ -42,11 +42,11 @@
 
 ---
 
-## introduction
+## Introduction
 
 [A JavaScript library for building user interfaces](https://reactjs.org/)
 
-## installation
+## Installation
 
 Install nodeJS and npm [here](https://nodejs.org/en/download/)
 
@@ -97,7 +97,7 @@ And that's all you need to start a project!
 -   `serviceWorker` is for PWA (Progressive Web App), which cache the app in the client for offline support. Don't register serviceWorker when you are developing apps, cache will be a headache when you try to change stuff, [read here](https://developers.google.com/web/fundamentals/primers/service-workers/)
 -   `App.js` is our first react component
 
-## basic
+## Basic
 
 **Tools will be used**
 
@@ -208,7 +208,6 @@ import { Formik, Form, Field } from 'formik';
 
 const CustomForm = () => (
     <Formik
-        initialValues={{ email: '', password: '' }}
         onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
                 alert(JSON.stringify(values, null, 2));
@@ -277,7 +276,7 @@ const getFact = () => {
 };
 ```
 
-## advanced
+## Advanced
 
 **UI library**
 
@@ -334,7 +333,7 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 2. waiting it to publish
 3. (damn simple right?)
 
-## references
+## References
 
 -   [React](https://reactjs.org/)
 -   [NodeJS](https://nodejs.org/en/download/)
@@ -363,7 +362,7 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 -   [Favicon generator](https://realfavicongenerator.net/)
 -   [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
 
-## end note
+## End Note
 
 And that's it for this HackNTU React workshop. Hope this helps!
 

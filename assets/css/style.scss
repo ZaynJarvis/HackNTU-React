@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -10,11 +11,6 @@
 .main-content {
   h1,h2,h3,h4,h5 {
     color:#4dd;
-  }
-  code {
-    color: #3f9;
-    background: transparent;
-    border: #3f97 2px solid;
   }
 }
 
