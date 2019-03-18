@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../components/Counter';
+import CatFact from '../components/CatFact';
 
-const MainPage = () => <Counter />;
+const MainPage = () => <CatFact />;
 export default MainPage;

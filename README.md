@@ -261,6 +261,22 @@ export default App;
 `exact` in Route is necessary cuz it means only / will match to that component.
 `Link` function just like `a` tag but with the `to` directive
 
+**Use api in React**
+
+For this practice we will use a [geek jokes api](https://geek-jokes.sameerkumar.website/api) as an example
+
+search apis [here](https://www.programmableweb.com)
+
+you have to find APIs which supports [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+```js
+const getFact = () => {
+	fetch('https://geek-jokes.sameerkumar.website/api')
+		.then(res => res.json())
+		.then(res => setFact(res));
+};
+```
+
 ## references
 
 - [React](https://reactjs.org/)
@@ -281,3 +297,5 @@ export default App;
 - [react router](https://reacttraining.com/react-router/web/guides/quick-start)
 - [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
 - [css color code](https://www.quackit.com/css/css_color_codes.cfm)
+- [API marketplace](https://www.programmableweb.com)
+- [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
