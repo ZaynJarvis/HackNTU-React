@@ -325,6 +325,14 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 
 1. draw your icon [here](https://vectr.com)
 2. generate favicon [here](https://realfavicongenerator.net/)
+3. Append icons into public folder
+4. update manifest file
+
+**Deploy with Netlify**
+
+1. Get a netlify account
+2. waiting it to publish
+3. (damn simple right?)
 
 ## references
 
@@ -353,4 +361,14 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 -   [firestore doc](https://firebase.google.com/docs/firestore/query-data/get-data)
 -   [Vectr online svg drawer](https://vectr.com)
 -   [Favicon generator](https://realfavicongenerator.net/)
--
+-   [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
+
+## end note
+
+And that's it for this HackNTU React workshop. Hope this helps!
+
+**_Happy Hacking!!!🎉🎉🎉_**
+
+---
+
+**_Made with ❤ by Zayn Jarvis from [NTUOSS](http://www.ntuoss.com/) collaborating with IEEE NTU Student Branch_**
