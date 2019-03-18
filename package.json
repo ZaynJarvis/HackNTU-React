@@ -1,51 +1,51 @@
 {
-	"name": "hack-ntu-react",
-	"version": "0.1.0",
-	"description": "React workshop for HackNTU 2019",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ZaynJarvis/HackNTU-React.git"
-	},
-	"keywords": [
-		"React",
-		"Hackathon",
-		"Training",
-		"NTU",
-		"IEEE"
-	],
-	"author": {
-		"name": "Zayn Jarvis",
-		"email": "zaynjarvis@gmail.com",
-		"url": "https://www.zaynjarvis.com/"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/ZaynJarvis/HackNTU-React/issues"
-	},
-	"homepage": "https://github.com/ZaynJarvis/HackNTU-React#readme",
-	"dependencies": {
-		"firebase": "5.9.0",
-		"formik": "1.5.1",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
-		"react-router-dom": "4.4.0",
-		"react-scripts": "2.1.8",
-		"styled-components": "4.1.3"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+    "name": "hack-ntu-react",
+    "version": "0.1.0",
+    "description": "React workshop for HackNTU 2019",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ZaynJarvis/HackNTU-React.git"
+    },
+    "keywords": [
+        "React",
+        "Hackathon",
+        "Training",
+        "NTU",
+        "IEEE"
+    ],
+    "author": {
+        "name": "Zayn Jarvis",
+        "email": "zaynjarvis@gmail.com",
+        "url": "https://www.zaynjarvis.com/"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ZaynJarvis/HackNTU-React/issues"
+    },
+    "homepage": "https://github.com/ZaynJarvis/HackNTU-React#readme",
+    "dependencies": {
+        "firebase": "5.9.0",
+        "formik": "1.5.1",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-router-dom": "4.4.0",
+        "react-scripts": "2.1.8",
+        "styled-components": "4.1.3"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }
