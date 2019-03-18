@@ -19,26 +19,26 @@
 
 ### Agenda
 
-- [Introduction to React](#introduction)
-- [Installation](#installation)
-  - Clone the repo
-  - React getting started
-- [React Essential](#basic)
-  - Tools will be used
-  - Install packages
-  - Application modular structure
-  - React Hooks
-  - Styling with styled-components
-  - Formik
-  - Router
-  - Dynamic content with API
-- [React Advanced](#advanced)
-  - UI libraries
-  - Firebase Firestore
-  - Progressive Web App
-  - Deploy to Netlify
-- [Recommanded References](#references)
-- [End Notes](#end-notes)
+-   [Introduction to React](#introduction)
+-   [Installation](#installation)
+    -   Clone the repo
+    -   React getting started
+-   [React Essential](#basic)
+    -   Tools will be used
+    -   Install packages
+    -   Application modular structure
+    -   React Hooks
+    -   Styling with styled-components
+    -   Formik
+    -   Router
+    -   Dynamic content with API
+-   [React Advanced](#advanced)
+    -   UI libraries
+    -   Firebase Firestore
+    -   Progressive Web App
+    -   Deploy to Netlify
+-   [Recommanded References](#references)
+-   [End Notes](#end-notes)
 
 ---
 
@@ -88,23 +88,23 @@ And that's all you need to start a project!
 
 > we reference the folder that package.json is in as the `'root folder' or '/'`. If you created React app using the above account root folder will be `my-react`
 
-- development related configuration files put into the root folder e.g. linting configuration, testing configuration, README, Changelog
-- deployment related files put into the
-- React application source code in src
-- `.test.js` / `.spec.js` are test files do to unit/ integration test, which is out of scope and not necessary in a Hackathon. However, testing is trivial in large scale / team based project
-- `index.js` is the entry point of the React App
-- `index.css` is the setting for react global style
-- `serviceWorker` is for PWA (Progressive Web App), which cache the app in the client for offline support. Don't register serviceWorker when you are developing apps, cache will be a headache when you try to change stuff, [read here](https://developers.google.com/web/fundamentals/primers/service-workers/)
-- `App.js` is our first react component
+-   development related configuration files put into the root folder e.g. linting configuration, testing configuration, README, Changelog
+-   deployment related files put into the
+-   React application source code in src
+-   `.test.js` / `.spec.js` are test files do to unit/ integration test, which is out of scope and not necessary in a Hackathon. However, testing is trivial in large scale / team based project
+-   `index.js` is the entry point of the React App
+-   `index.css` is the setting for react global style
+-   `serviceWorker` is for PWA (Progressive Web App), which cache the app in the client for offline support. Don't register serviceWorker when you are developing apps, cache will be a headache when you try to change stuff, [read here](https://developers.google.com/web/fundamentals/primers/service-workers/)
+-   `App.js` is our first react component
 
 ## basic
 
 **Tools will be used**
 
-- [styled-components](https://www.styled-components.com/docs): powerful css-in-js library
-- [Firebase firestore](https://firebase.google.com/products/firestore/): online database which is great for rapid prototyping.
-- [formik](https://jaredpalmer.com/formik/): The best form control library
-- [react router](https://reacttraining.com/react-router/web/guides/quick-start): The best react router library
+-   [styled-components](https://www.styled-components.com/docs): powerful css-in-js library
+-   [Firebase firestore](https://firebase.google.com/products/firestore/): online database which is great for rapid prototyping.
+-   [formik](https://jaredpalmer.com/formik/): The best form control library
+-   [react router](https://reacttraining.com/react-router/web/guides/quick-start): The best react router library
 
 **Install packages**
 
@@ -146,7 +146,7 @@ For this workshop I will only use some of them for simplicity, however it is a g
 
 This is the most basic react app which does nothing.
 
-```js
+```jsx
 import React from 'react';
 
 const MainPage = () => <div />;
@@ -166,17 +166,17 @@ Starting from React 16.8, [released a month ago](https://github.com/facebook/rea
 
 The most basic react hook is like this
 
-```js
+```jsx
 import React from 'react';
 
 const Counter = () => {
-	const [count, setCount] = React.useState(0);
-	return (
-		<>
-			<button onClick={() => setCount(count + 1)}>add one</button>
-			<span>{count}</span>
-		</>
-	);
+    const [count, setCount] = React.useState(0);
+    return (
+        <>
+            <button onClick={() => setCount(count + 1)}>add one</button>
+            <span>{count}</span>
+        </>
+    );
 };
 export default Counter;
 ```
@@ -186,13 +186,13 @@ export default Counter;
 Here is the most basic styled component, which align content at center.
 For more on [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
 
-```js
+```jsx
 const Wrapper = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
 `;
 ```
 
@@ -202,30 +202,30 @@ CSS Color Code [here](https://www.quackit.com/css/css_color_codes.cfm)
 
 Formik helps you to set up forms with ease.
 
-```js
+```jsx
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 
 const CustomForm = () => (
-	<Formik
-		initialValues={{ email: '', password: '' }}
-		onSubmit={(values, { setSubmitting }) => {
-			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
-				setSubmitting(false);
-			}, 400);
-		}}
-	>
-		{({ isSubmitting }) => (
-			<Form>
-				<Field type='email' name='email' />
-				<Field type='password' name='password' />
-				<button type='submit' disabled={isSubmitting}>
-					Submit
-				</button>
-			</Form>
-		)}
-	</Formik>
+    <Formik
+        initialValues={{ email: '', password: '' }}
+        onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+                setSubmitting(false);
+            }, 400);
+        }}
+    >
+        {({ isSubmitting }) => (
+            <Form>
+                <Field type='email' name='email' />
+                <Field type='password' name='password' />
+                <button type='submit' disabled={isSubmitting}>
+                    Submit
+                </button>
+            </Form>
+        )}
+    </Formik>
 );
 
 export default CustomForm;
@@ -235,7 +235,7 @@ export default CustomForm;
 
 This is the most basic react router
 
-```js
+```jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -243,16 +243,16 @@ import MainPage from './containers/MainPage';
 import FormPage from './containers/FormPage';
 
 const App = () => (
-	<Router>
-		<div>
-			<nav>
-				<Link to='/'>Home</Link>
-				<Link to='/form'>Form</Link>
-			</nav>
-			<Route path='/' exact component={MainPage} />
-			<Route path='/form' component={FormPage} />
-		</div>
-	</Router>
+    <Router>
+        <div>
+            <nav>
+                <Link to='/'>Home</Link>
+                <Link to='/form'>Form</Link>
+            </nav>
+            <Route path='/' exact component={MainPage} />
+            <Route path='/form' component={FormPage} />
+        </div>
+    </Router>
 );
 
 export default App;
@@ -269,11 +269,11 @@ search apis [here](https://www.programmableweb.com)
 
 you have to find APIs which supports [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
-```js
+```jsx
 const getFact = () => {
-	fetch('https://geek-jokes.sameerkumar.website/api')
-		.then(res => res.json())
-		.then(res => setFact(res));
+    fetch('https://geek-jokes.sameerkumar.website/api')
+        .then(res => res.json())
+        .then(res => setFact(res));
 };
 ```
 
@@ -283,8 +283,8 @@ const getFact = () => {
 
 Two recommanded UI libraries are
 
-- [Material UI](https://material-ui.com/)
-- [ant design](https://ant.design/)
+-   [Material UI](https://material-ui.com/)
+-   [ant design](https://ant.design/)
 
 Do take note that UI library may be hard to interpolate
 
@@ -293,25 +293,25 @@ Do take note that UI library may be hard to interpolate
 1. register an firebase app
 2. create firebase singleton instance in your app.
 
-```js
+```jsx
 class FireApp {
-	constructor(config) {
-		firebase.initializeApp(config);
-		this.firestore = firebase.firestore();
-	}
-	post(msg) {
-		const time = new Date().toISOString();
-		return this.firestore
-			.collection('msg')
-			.doc()
-			.set({
-				time,
-				...msg,
-			});
-	}
-	get() {
-		return this.firestore.collection('msg').get();
-	}
+    constructor(config) {
+        firebase.initializeApp(config);
+        this.firestore = firebase.firestore();
+    }
+    post(msg) {
+        const time = new Date().toISOString();
+        return this.firestore
+            .collection('msg')
+            .doc()
+            .set({
+                time,
+                ...msg,
+            });
+    }
+    get() {
+        return this.firestore.collection('msg').get();
+    }
 }
 
 export default new FireApp(config);
@@ -336,32 +336,32 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 
 ## references
 
-- [React](https://reactjs.org/)
-- [NodeJS](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
-- [npm or yarn](https://www.keycdn.com/blog/npm-vs-yarn)
-- [GitHub](https://github.com/)
-- [Git-Workshop](https://github.com/clarencecastillo/NTUOSS-GitWorkshop)
-- [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
-- [create-react-app](https://github.com/facebook/create-react-app)
-- [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/)
-- [Firebase firestore](https://firebase.google.com/products/firestore/)
-- [styled-components](https://www.styled-components.com/docs)
-- [arrow functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
-- [react 16.8](https://github.com/facebook/react/blob/master/CHANGELOG.md#1680-february-6-2019)
-- [react hook](https://reactjs.org/docs/hooks-intro.html)
-- [formik](https://jaredpalmer.com/formik/)
-- [react router](https://reacttraining.com/react-router/web/guides/quick-start)
-- [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
-- [css color code](https://www.quackit.com/css/css_color_codes.cfm)
-- [API marketplace](https://www.programmableweb.com)
-- [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-- [Material UI](https://material-ui.com/)
-- [ant design](https://ant.design/)
-- [firestore doc](https://firebase.google.com/docs/firestore/query-data/get-data)
-- [Vectr online svg drawer](https://vectr.com)
-- [Favicon generator](https://realfavicongenerator.net/)
-- [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
+-   [React](https://reactjs.org/)
+-   [NodeJS](https://nodejs.org/en/download/)
+-   [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
+-   [npm or yarn](https://www.keycdn.com/blog/npm-vs-yarn)
+-   [GitHub](https://github.com/)
+-   [Git-Workshop](https://github.com/clarencecastillo/NTUOSS-GitWorkshop)
+-   [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+-   [create-react-app](https://github.com/facebook/create-react-app)
+-   [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/)
+-   [Firebase firestore](https://firebase.google.com/products/firestore/)
+-   [styled-components](https://www.styled-components.com/docs)
+-   [arrow functions](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+-   [react 16.8](https://github.com/facebook/react/blob/master/CHANGELOG.md#1680-february-6-2019)
+-   [react hook](https://reactjs.org/docs/hooks-intro.html)
+-   [formik](https://jaredpalmer.com/formik/)
+-   [react router](https://reacttraining.com/react-router/web/guides/quick-start)
+-   [flexbox](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
+-   [css color code](https://www.quackit.com/css/css_color_codes.cfm)
+-   [API marketplace](https://www.programmableweb.com)
+-   [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+-   [Material UI](https://material-ui.com/)
+-   [ant design](https://ant.design/)
+-   [firestore doc](https://firebase.google.com/docs/firestore/query-data/get-data)
+-   [Vectr online svg drawer](https://vectr.com)
+-   [Favicon generator](https://realfavicongenerator.net/)
+-   [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
 
 ## end note
 

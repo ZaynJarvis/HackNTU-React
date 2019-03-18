@@ -11,12 +11,14 @@
   h1,h2,h3,h4,h5 {
     color:#4dd;
   }
+  code {
+    color: #3f9;
+    background: transparent;
+    border: #3f97 2px solid;
+  }
 }
 
-code {
-  color: #3f9;
-  border: #3f97 2px solid;
-}
+
 
 a{
   color: rgb(83, 125, 238);
