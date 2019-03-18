@@ -321,6 +321,11 @@ export default new FireApp(config);
 
 understand how to work with firebase get / post [here](https://firebase.google.com/docs/firestore/query-data/get-data)
 
+**PWA**
+
+1. draw your icon [here](https://vectr.com)
+2. generate favicon [here](https://realfavicongenerator.net/)
+
 ## references
 
 -   [React](https://reactjs.org/)
@@ -345,3 +350,7 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 -   [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 -   [Material UI](https://material-ui.com/)
 -   [ant design](https://ant.design/)
+-   [firestore doc](https://firebase.google.com/docs/firestore/query-data/get-data)
+-   [Vectr online svg drawer](https://vectr.com)
+-   [Favicon generator](https://realfavicongenerator.net/)
+-
