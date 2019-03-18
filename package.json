@@ -23,7 +23,6 @@
     "bugs": {
         "url": "https://github.com/ZaynJarvis/HackNTU-React/issues"
     },
-    "homepage": "https://github.com/ZaynJarvis/HackNTU-React#readme",
     "dependencies": {
         "firebase": "5.9.0",
         "formik": "1.5.1",
