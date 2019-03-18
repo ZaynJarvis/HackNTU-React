@@ -1,7 +1,27 @@
 ---
 ---
-
 @import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+  h1,h2,h3,h4,h5 {
+    color:#4dd;
+  }
+}
+
+code {
+  color: #3f9;
+  border: #3f97 2px solid;
+}
+
+a{
+  color: rgb(83, 125, 238);
+}
+
 .page-header {
   background-image: linear-gradient(120deg,#Adc3c7,#112330);
   font-family: 'Courier new';
