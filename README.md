@@ -327,6 +327,7 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 2. generate favicon [here](https://realfavicongenerator.net/)
 3. Append icons into public folder
 4. update manifest file
+> refer to the references for the links
 
 **Deploy with Netlify**
 
@@ -359,9 +360,10 @@ understand how to work with firebase get / post [here](https://firebase.google.c
 -   [Material UI](https://material-ui.com/)
 -   [ant design](https://ant.design/)
 -   [firestore doc](https://firebase.google.com/docs/firestore/query-data/get-data)
+-   [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
 -   [Vectr online svg drawer](https://vectr.com)
 -   [Favicon generator](https://realfavicongenerator.net/)
--   [About PWA](https://medium.com/@amberleyjohanna/seriously-though-what-is-a-progressive-web-app-56130600a093)
+-   [Splash Screen Generator](https://appsco.pe/developer/splash-screens)
 
 ## end note
 
